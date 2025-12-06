@@ -14,11 +14,12 @@ public class CriarBanco{
             st.execute("CREATE TABLE IF NOT EXISTS CadastroPacientes (" + 
             "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             "Nome TEXT NOT NULL," +
-            "Idade INTERGER," +
-            "Peso NUMERIC(5, 2)," +
-            "Altura NUMERIC(3,2)");
+            "Idade INTEGER," +
+            "Peso REAL," +
+            "Altura REAL)");
 
-            st.execute("SELECT * FROM CadastroPacientes");
+            st.close();
+            conn.close();
 
         } catch (Exception e) {
             e.printStackTrace();
